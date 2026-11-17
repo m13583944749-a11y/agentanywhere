@@ -1,0 +1,180 @@
+Building for debugging...
+[0/2] Write swift-version-1807DCFF0C230AC5.txt
+Build complete! (0.60s)
+Test Suite 'All tests' started at 2026-11-18 01:31:32.814
+Test Suite 'debug.xctest' started at 2026-11-18 01:31:32.819
+Test Suite 'ArchiveTests' started at 2026-11-18 01:31:32.819
+Test Case 'ArchiveTests.testCancellationAndLZ4PasswordError' started at 2026-11-18 01:31:32.819
+Test Case 'ArchiveTests.testCancellationAndLZ4PasswordError' passed (0.006 seconds)
+Test Case 'ArchiveTests.testDeflatedZipFixture' started at 2026-11-18 01:31:32.825
+Test Case 'ArchiveTests.testDeflatedZipFixture' passed (0.053 seconds)
+Test Case 'ArchiveTests.testEncryptedSevenZipHasExplicitPasswordErrors' started at 2026-11-18 01:31:32.877
+Test Case 'ArchiveTests.testEncryptedSevenZipHasExplicitPasswordErrors' passed (0.003 seconds)
+Test Case 'ArchiveTests.testEncryptedZipHasExplicitPasswordErrors' started at 2026-11-18 01:31:32.880
+Test Case 'ArchiveTests.testEncryptedZipHasExplicitPasswordErrors' passed (0.105 seconds)
+Test Case 'ArchiveTests.testExistingDestinationSymlinkIsRejected' started at 2026-11-18 01:31:32.986
+Test Case 'ArchiveTests.testExistingDestinationSymlinkIsRejected' passed (0.014 seconds)
+Test Case 'ArchiveTests.testFormatDetectionUsesMagicBeforeExtension' started at 2026-11-18 01:31:33.000
+Test Case 'ArchiveTests.testFormatDetectionUsesMagicBeforeExtension' passed (0.002 seconds)
+Test Case 'ArchiveTests.testRARIsExplicitlyUnsupportedAndCanUseIndependentBackend' started at 2026-11-18 01:31:33.002
+Test Case 'ArchiveTests.testRARIsExplicitlyUnsupportedAndCanUseIndependentBackend' passed (0.018 seconds)
+Test Case 'ArchiveTests.testRealLZ4AndConcatenatedFrames' started at 2026-11-18 01:31:33.020
+Test Case 'ArchiveTests.testRealLZ4AndConcatenatedFrames' passed (0.02 seconds)
+Test Case 'ArchiveTests.testRealSevenZipFixture' started at 2026-11-18 01:31:33.041
+Test Case 'ArchiveTests.testRealSevenZipFixture' passed (0.024 seconds)
+Test Case 'ArchiveTests.testStoredZipExtractionFromDataAndFile' started at 2026-11-18 01:31:33.064
+Test Case 'ArchiveTests.testStoredZipExtractionFromDataAndFile' passed (0.075 seconds)
+Test Case 'ArchiveTests.testZipSlipAbsoluteAndWindowsPathsAreRejectedBeforeWriting' started at 2026-11-18 01:31:33.139
+Test Case 'ArchiveTests.testZipSlipAbsoluteAndWindowsPathsAreRejectedBeforeWriting' passed (0.013 seconds)
+Test Case 'ArchiveTests.testZipSymbolicLinkEntryIsRejected' started at 2026-11-18 01:31:33.153
+Test Case 'ArchiveTests.testZipSymbolicLinkEntryIsRejected' passed (0.006 seconds)
+Test Suite 'ArchiveTests' passed at 2026-11-18 01:31:33.159
+	 Executed 12 tests, with 0 failures (0 unexpected) in 0.339 (0.339) seconds
+Test Suite 'DownloadTests' started at 2026-11-18 01:31:33.159
+Test Case 'DownloadTests.testAutomaticRetryResumesFailedRequest' started at 2026-11-18 01:31:33.159
+Test Case 'DownloadTests.testAutomaticRetryResumesFailedRequest' passed (1.389 seconds)
+Test Case 'DownloadTests.testCancelRemovesPartialAndManualRetryStartsCleanly' started at 2026-11-18 01:31:34.548
+Test Case 'DownloadTests.testCancelRemovesPartialAndManualRetryStartsCleanly' passed (0.931 seconds)
+Test Case 'DownloadTests.testPauseResumeUsesRangeAndETagAndPreservesBytes' started at 2026-11-18 01:31:35.479
+Test Case 'DownloadTests.testPauseResumeUsesRangeAndETagAndPreservesBytes' passed (0.754 seconds)
+Test Case 'DownloadTests.testQueueConcurrencySafeNamesAndConflictRenaming' started at 2026-11-18 01:31:36.233
+Test Case 'DownloadTests.testQueueConcurrencySafeNamesAndConflictRenaming' passed (0.719 seconds)
+Test Case 'DownloadTests.testRegisteredResolverSupportsResourceWithoutDirectURL' started at 2026-11-18 01:31:36.952
+Test Case 'DownloadTests.testRegisteredResolverSupportsResourceWithoutDirectURL' passed (0.049 seconds)
+Test Case 'DownloadTests.testRetryWithHTTP200TruncatesPartialAndUsesLastModifiedIfRange' started at 2026-11-18 01:31:37.001
+Test Case 'DownloadTests.testRetryWithHTTP200TruncatesPartialAndUsesLastModifiedIfRange' passed (0.551 seconds)
+Test Suite 'DownloadTests' passed at 2026-11-18 01:31:37.552
+	 Executed 6 tests, with 0 failures (0 unexpected) in 4.392 (4.392) seconds
+Test Suite 'LibraryTests' started at 2026-11-18 01:31:37.552
+Test Case 'LibraryTests.testFileSelectionIsCopiedAsOneGameAndNameCollisionIsSafe' started at 2026-11-18 01:31:37.552
+Test Case 'LibraryTests.testFileSelectionIsCopiedAsOneGameAndNameCollisionIsSafe' passed (0.107 seconds)
+Test Case 'LibraryTests.testFolderImportOwnsItsCopy' started at 2026-11-18 01:31:37.660
+Test Case 'LibraryTests.testFolderImportOwnsItsCopy' passed (0.023 seconds)
+Test Case 'LibraryTests.testKirikiriAcceptsNamedXP3AsMobileLaunchCandidate' started at 2026-11-18 01:31:37.683
+Test Case 'LibraryTests.testKirikiriAcceptsNamedXP3AsMobileLaunchCandidate' passed (0.014 seconds)
+Test Case 'LibraryTests.testKirikiriFindsActualRootInsideSingleArchiveWrapper' started at 2026-11-18 01:31:37.697
+Test Case 'LibraryTests.testKirikiriFindsActualRootInsideSingleArchiveWrapper' passed (0.066 seconds)
+Test Case 'LibraryTests.testLaunchCandidatesAreExistingFilesAndPrioritizeLaunchers' started at 2026-11-18 01:31:37.764
+Test Case 'LibraryTests.testLaunchCandidatesAreExistingFilesAndPrioritizeLaunchers' passed (0.014 seconds)
+Test Case 'LibraryTests.testOnscripterRecognizesEveryDocumentedMarker' started at 2026-11-18 01:31:37.777
+Test Case 'LibraryTests.testOnscripterRecognizesEveryDocumentedMarker' passed (0.028 seconds)
+Test Case 'LibraryTests.testOtherEnginesAndUnknownHaveStableEvidenceAndLaunchers' started at 2026-11-18 01:31:37.805
+Test Case 'LibraryTests.testOtherEnginesAndUnknownHaveStableEvidenceAndLaunchers' passed (0.131 seconds)
+Test Case 'LibraryTests.testRenpyRequiresBothGameFilesAndRuntime' started at 2026-11-18 01:31:37.936
+Test Case 'LibraryTests.testRenpyRequiresBothGameFilesAndRuntime' passed (0.069 seconds)
+Test Case 'LibraryTests.testStoreRejectsTraversalAndValidatesManualLaunchFile' started at 2026-11-18 01:31:38.005
+Test Case 'LibraryTests.testStoreRejectsTraversalAndValidatesManualLaunchFile' passed (0.007 seconds)
+Test Case 'LibraryTests.testViewModelPersistsManualChangesAndFiltersGames' started at 2026-11-18 01:31:38.012
+Test Case 'LibraryTests.testViewModelPersistsManualChangesAndFiltersGames' passed (0.028 seconds)
+Test Case 'LibraryTests.testZIPImportExtractsAndScansNestedGame' started at 2026-11-18 01:31:38.040
+Test Case 'LibraryTests.testZIPImportExtractsAndScansNestedGame' passed (0.177 seconds)
+Test Case 'LibraryTests.testZIPShareContainsCompleteTreeAndCleanupOnlyRemovesTemporaryArchive' started at 2026-11-18 01:31:38.217
+Test Case 'LibraryTests.testZIPShareContainsCompleteTreeAndCleanupOnlyRemovesTemporaryArchive' passed (0.056 seconds)
+Test Suite 'LibraryTests' passed at 2026-11-18 01:31:38.273
+	 Executed 12 tests, with 0 failures (0 unexpected) in 0.72 (0.72) seconds
+Test Suite 'NetworkingTests' started at 2026-11-18 01:31:38.273
+Test Case 'NetworkingTests.testJSONValueRejectsUnsafeIntegerConversion' started at 2026-11-18 01:31:38.273
+Test Case 'NetworkingTests.testJSONValueRejectsUnsafeIntegerConversion' passed (0.006 seconds)
+Test Case 'NetworkingTests.testNextMoeSummaryMapping' started at 2026-11-18 01:31:38.279
+Test Case 'NetworkingTests.testNextMoeSummaryMapping' passed (0.018 seconds)
+Test Case 'NetworkingTests.testSearchGalFormAndSSEMapping' started at 2026-11-18 01:31:38.298
+Test Case 'NetworkingTests.testSearchGalFormAndSSEMapping' passed (0.031 seconds)
+Test Case 'NetworkingTests.testVNDBRatingUsesTenPointScale' started at 2026-11-18 01:31:38.329
+Test Case 'NetworkingTests.testVNDBRatingUsesTenPointScale' passed (0.01 seconds)
+Test Suite 'NetworkingTests' passed at 2026-11-18 01:31:38.339
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.065 (0.065) seconds
+Test Suite 'PanTests' started at 2026-11-18 01:31:38.339
+Test Case 'PanTests.test115DynamicUAListAndSingleFileDownload' started at 2026-11-18 01:31:38.339
+Test Case 'PanTests.test115DynamicUAListAndSingleFileDownload' passed (0.026 seconds)
+Test Case 'PanTests.test123SignedListDownloadDTOAndEmbeddedURL' started at 2026-11-18 01:31:38.364
+Test Case 'PanTests.test123SignedListDownloadDTOAndEmbeddedURL' passed (0.023 seconds)
+Test Case 'PanTests.testAccountStoreUsesFixedKeysAndLogoutRemovesToken' started at 2026-11-18 01:31:38.387
+Test Case 'PanTests.testAccountStoreUsesFixedKeysAndLogoutRemovesToken' passed (0.001 seconds)
+Test Case 'PanTests.testBaiduErrnoMinusSixNeedsLogin' started at 2026-11-18 01:31:38.388
+Test Case 'PanTests.testBaiduErrnoMinusSixNeedsLogin' passed (0.013 seconds)
+Test Case 'PanTests.testBaiduVerifyRefreshesParametersThenListsAndDownloads' started at 2026-11-18 01:31:38.401
+Test Case 'PanTests.testBaiduVerifyRefreshesParametersThenListsAndDownloads' passed (0.023 seconds)
+Test Case 'PanTests.testEmptyAndRemoteHTTPErrorMappings' started at 2026-11-18 01:31:38.424
+Test Case 'PanTests.testEmptyAndRemoteHTTPErrorMappings' passed (0.023 seconds)
+Test Case 'PanTests.testILanzouDoesNotRequireZTAndAdapterReturnsResolvedDownload' started at 2026-11-18 01:31:38.447
+Test Case 'PanTests.testILanzouDoesNotRequireZTAndAdapterReturnsResolvedDownload' passed (0.022 seconds)
+Test Case 'PanTests.testLanzouIframeFormAndFileName' started at 2026-11-18 01:31:38.469
+Test Case 'PanTests.testLanzouIframeFormAndFileName' passed (0.025 seconds)
+Test Case 'PanTests.testLanzouPathAndInvalidOrUnsupportedShares' started at 2026-11-18 01:31:38.494
+Test Case 'PanTests.testLanzouPathAndInvalidOrUnsupportedShares' passed (0.003 seconds)
+Test Case 'PanTests.testLooseIDsBaiduPageParametersAndFormBody' started at 2026-11-18 01:31:38.497
+Test Case 'PanTests.testLooseIDsBaiduPageParametersAndFormBody' passed (0.001 seconds)
+Test Case 'PanTests.testMissingCredentialsAndUnsupportedProvidersMakeNoRequests' started at 2026-11-18 01:31:38.499
+Test Case 'PanTests.testMissingCredentialsAndUnsupportedProvidersMakeNoRequests' passed (0.005 seconds)
+Test Case 'PanTests.testPan123CRC32AndDeterministicSignature' started at 2026-11-18 01:31:38.504
+Test Case 'PanTests.testPan123CRC32AndDeterministicSignature' passed (0.006 seconds)
+Test Case 'PanTests.testQuarkAndPan123RequestDTOEncoding' started at 2026-11-18 01:31:38.510
+Test Case 'PanTests.testQuarkAndPan123RequestDTOEncoding' passed (0.005 seconds)
+Test Case 'PanTests.testQuarkErrorCodesMapToUserFlows' started at 2026-11-18 01:31:38.515
+Test Case 'PanTests.testQuarkErrorCodesMapToUserFlows' passed (0.023 seconds)
+Test Case 'PanTests.testQuarkThreeStepsTrackPugsAndReturnEveryFile' started at 2026-11-18 01:31:38.539
+Test Case 'PanTests.testQuarkThreeStepsTrackPugsAndReturnEveryFile' passed (0.02 seconds)
+Test Case 'PanTests.testShareCodeURLAndPasscodeExtraction' started at 2026-11-18 01:31:38.558
+Test Case 'PanTests.testShareCodeURLAndPasscodeExtraction' passed (0.002 seconds)
+Test Case 'PanTests.testUCUsesThreeStepV2DetailAndFTDownloadEndpoints' started at 2026-11-18 01:31:38.561
+Test Case 'PanTests.testUCUsesThreeStepV2DetailAndFTDownloadEndpoints' passed (0.021 seconds)
+Test Suite 'PanTests' passed at 2026-11-18 01:31:38.584
+	 Executed 17 tests, with 0 failures (0 unexpected) in 0.242 (0.242) seconds
+Test Suite 'ProfileTests' started at 2026-11-18 01:31:38.584
+Test Case 'ProfileTests.testAvatarAndAllEditorsSurviveStoreReload' started at 2026-11-18 01:31:38.584
+Test Case 'ProfileTests.testAvatarAndAllEditorsSurviveStoreReload' passed (0.078 seconds)
+Test Case 'ProfileTests.testDisplayNameIsTrimmedLimitedAndPersisted' started at 2026-11-18 01:31:38.663
+Test Case 'ProfileTests.testDisplayNameIsTrimmedLimitedAndPersisted' passed (0.128 seconds)
+Test Case 'ProfileTests.testFirstMutationLoadsExistingDiskDataBeforeSaving' started at 2026-11-18 01:31:38.791
+Test Case 'ProfileTests.testFirstMutationLoadsExistingDiskDataBeforeSaving' passed (0.039 seconds)
+Test Case 'ProfileTests.testInvalidBackupDoesNotReplaceCurrentData' started at 2026-11-18 01:31:38.830
+Test Case 'ProfileTests.testInvalidBackupDoesNotReplaceCurrentData' passed (0.018 seconds)
+Test Case 'ProfileTests.testRecordEditingFilteringFavoriteAndDeletion' started at 2026-11-18 01:31:38.848
+Test Case 'ProfileTests.testRecordEditingFilteringFavoriteAndDeletion' passed (0.033 seconds)
+Test Case 'ProfileTests.testRecordsAreLimitedToNewestTwoHundredOnImport' started at 2026-11-18 01:31:38.881
+Test Case 'ProfileTests.testRecordsAreLimitedToNewestTwoHundredOnImport' passed (0.069 seconds)
+Test Case 'ProfileTests.testReviewCreateEditOrderingAndDelete' started at 2026-11-18 01:31:38.950
+Test Case 'ProfileTests.testReviewCreateEditOrderingAndDelete' passed (0.031 seconds)
+Test Case 'ProfileTests.testSelfContainedJSONBackupRoundTripThroughFile' started at 2026-11-18 01:31:38.981
+Test Case 'ProfileTests.testSelfContainedJSONBackupRoundTripThroughFile' passed (0.102 seconds)
+Test Suite 'ProfileTests' passed at 2026-11-18 01:31:39.083
+	 Executed 8 tests, with 0 failures (0 unexpected) in 0.497 (0.497) seconds
+Test Suite 'RoutesTests' started at 2026-11-18 01:31:39.083
+Test Case 'RoutesTests.testCRUDMoveEditDeleteAndReload' started at 2026-11-18 01:31:39.083
+Test Case 'RoutesTests.testCRUDMoveEditDeleteAndReload' passed (0.037 seconds)
+Test Case 'RoutesTests.testCorruptedJSONIsMovedAsideInsteadOfDeletingUserContent' started at 2026-11-18 01:31:39.120
+Test Case 'RoutesTests.testCorruptedJSONIsMovedAsideInsteadOfDeletingUserContent' passed (0.015 seconds)
+Test Case 'RoutesTests.testImportRouteCreatesSelectedRoutesAndPersistsAtomically' started at 2026-11-18 01:31:39.135
+Test Case 'RoutesTests.testImportRouteCreatesSelectedRoutesAndPersistsAtomically' passed (0.014 seconds)
+Test Case 'RoutesTests.testImportSelectedNodesUsesSameEditableRouteModel' started at 2026-11-18 01:31:39.150
+Test Case 'RoutesTests.testImportSelectedNodesUsesSameEditableRouteModel' passed (0.007 seconds)
+Test Case 'RoutesTests.testParserBuildsEditableNodesWithMetadata' started at 2026-11-18 01:31:39.157
+Test Case 'RoutesTests.testParserBuildsEditableNodesWithMetadata' passed (0.004 seconds)
+Test Case 'RoutesTests.testReimportKeepsRouteIdentityAndStatusButRefreshesNodes' started at 2026-11-18 01:31:39.161
+Test Case 'RoutesTests.testReimportKeepsRouteIdentityAndStatusButRefreshesNodes' passed (0.011 seconds)
+Test Case 'RoutesTests.testShareTextContainsAllEditableContent' started at 2026-11-18 01:31:39.172
+Test Case 'RoutesTests.testShareTextContainsAllEditableContent' passed (0.009 seconds)
+Test Suite 'RoutesTests' passed at 2026-11-18 01:31:39.182
+	 Executed 7 tests, with 0 failures (0 unexpected) in 0.098 (0.098) seconds
+Test Suite 'SegmentedDownloadTests' started at 2026-11-18 01:31:39.182
+Test Case 'SegmentedDownloadTests.testCancellationPersistsSegmentsAndResumeSkipsCompletedRange' started at 2026-11-18 01:31:39.182
+Test Case 'SegmentedDownloadTests.testCancellationPersistsSegmentsAndResumeSkipsCompletedRange' passed (0.869 seconds)
+Test Case 'SegmentedDownloadTests.testEmptyResourceProbe416ReturnsOnlyVerifiedEmptyFile' started at 2026-11-18 01:31:40.051
+Test Case 'SegmentedDownloadTests.testEmptyResourceProbe416ReturnsOnlyVerifiedEmptyFile' passed (0.033 seconds)
+Test Case 'SegmentedDownloadTests.testHTTP200AllowsCallerToFallbackToSingleStream' started at 2026-11-18 01:31:40.084
+Test Case 'SegmentedDownloadTests.testHTTP200AllowsCallerToFallbackToSingleStream' passed (0.039 seconds)
+Test Case 'SegmentedDownloadTests.testNonEmptyProbe416DoesNotFabricateCompletedFile' started at 2026-11-18 01:31:40.123
+Test Case 'SegmentedDownloadTests.testNonEmptyProbe416DoesNotFabricateCompletedFile' passed (0.012 seconds)
+Test Case 'SegmentedDownloadTests.testParallelRangesWriteExactFileAndReportAggregateProgress' started at 2026-11-18 01:31:40.135
+Test Case 'SegmentedDownloadTests.testParallelRangesWriteExactFileAndReportAggregateProgress' passed (0.557 seconds)
+Test Case 'SegmentedDownloadTests.testShortSegmentThrowsAndNextRunRequestsMissingBytes' started at 2026-11-18 01:31:40.692
+Test Case 'SegmentedDownloadTests.testShortSegmentThrowsAndNextRunRequestsMissingBytes' passed (0.373 seconds)
+Test Suite 'SegmentedDownloadTests' passed at 2026-11-18 01:31:41.066
+	 Executed 6 tests, with 0 failures (0 unexpected) in 1.883 (1.883) seconds
+Test Suite 'debug.xctest' passed at 2026-11-18 01:31:41.066
+	 Executed 72 tests, with 0 failures (0 unexpected) in 8.237 (8.237) seconds
+Test Suite 'All tests' passed at 2026-11-18 01:31:41.066
+	 Executed 72 tests, with 0 failures (0 unexpected) in 8.237 (8.237) seconds
+◇ Test run started.
+↳ Testing Library Version: 6.0.3 (18c42c19cac3faf)
+✔ Test run with 0 tests passed after 0.001 seconds.

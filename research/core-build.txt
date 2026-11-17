@@ -1,0 +1,626 @@
+[0/1] Planning build
+Building for debugging...
+[0/2] Write sources
+[1/2] Write swift-version-1807DCFF0C230AC5.txt
+[3/15] Emitting module GalNookCore
+[4/27] Compiling GalNookCore ArchiveFileWriter.swift
+/tmp/galnook-core-validation/Sources/GalNookCore/Downloads/SegmentedDownloadEngine.swift:389:25: warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+387 |         let fileManager = FileManager.default
+388 |         if !fileManager.fileExists(atPath: partialURL.path) {
+389 |             fileManager.createFile(atPath: partialURL.path, contents: nil)
+    |                         `- warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+390 |         }
+391 |         let handle = try FileHandle(forWritingTo: partialURL)
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Library/GameSharingService.swift:97:29: warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+ 95 | 
+ 96 |     static func write(folder: URL, to outputURL: URL) throws {
+ 97 |         FileManager.default.createFile(atPath: outputURL.path, contents: nil)
+    |                             `- warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+ 98 |         let handle = try FileHandle(forWritingTo: outputURL)
+ 99 |         let writer = ZipArchiveWriter(output: handle)
+[5/27] Compiling GalNookCore ArchiveService.swift
+/tmp/galnook-core-validation/Sources/GalNookCore/Downloads/SegmentedDownloadEngine.swift:389:25: warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+387 |         let fileManager = FileManager.default
+388 |         if !fileManager.fileExists(atPath: partialURL.path) {
+389 |             fileManager.createFile(atPath: partialURL.path, contents: nil)
+    |                         `- warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+390 |         }
+391 |         let handle = try FileHandle(forWritingTo: partialURL)
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Library/GameSharingService.swift:97:29: warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+ 95 | 
+ 96 |     static func write(folder: URL, to outputURL: URL) throws {
+ 97 |         FileManager.default.createFile(atPath: outputURL.path, contents: nil)
+    |                             `- warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+ 98 |         let handle = try FileHandle(forWritingTo: outputURL)
+ 99 |         let writer = ZipArchiveWriter(output: handle)
+[6/27] Compiling GalNookCore SWCompressionBackends.swift
+/tmp/galnook-core-validation/Sources/GalNookCore/Downloads/SegmentedDownloadEngine.swift:389:25: warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+387 |         let fileManager = FileManager.default
+388 |         if !fileManager.fileExists(atPath: partialURL.path) {
+389 |             fileManager.createFile(atPath: partialURL.path, contents: nil)
+    |                         `- warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+390 |         }
+391 |         let handle = try FileHandle(forWritingTo: partialURL)
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Library/GameSharingService.swift:97:29: warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+ 95 | 
+ 96 |     static func write(folder: URL, to outputURL: URL) throws {
+ 97 |         FileManager.default.createFile(atPath: outputURL.path, contents: nil)
+    |                             `- warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+ 98 |         let handle = try FileHandle(forWritingTo: outputURL)
+ 99 |         let writer = ZipArchiveWriter(output: handle)
+[7/27] Compiling GalNookCore DirectDownloadEngine.swift
+/tmp/galnook-core-validation/Sources/GalNookCore/Downloads/SegmentedDownloadEngine.swift:389:25: warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+387 |         let fileManager = FileManager.default
+388 |         if !fileManager.fileExists(atPath: partialURL.path) {
+389 |             fileManager.createFile(atPath: partialURL.path, contents: nil)
+    |                         `- warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+390 |         }
+391 |         let handle = try FileHandle(forWritingTo: partialURL)
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Library/GameSharingService.swift:97:29: warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+ 95 | 
+ 96 |     static func write(folder: URL, to outputURL: URL) throws {
+ 97 |         FileManager.default.createFile(atPath: outputURL.path, contents: nil)
+    |                             `- warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+ 98 |         let handle = try FileHandle(forWritingTo: outputURL)
+ 99 |         let writer = ZipArchiveWriter(output: handle)
+[8/27] Compiling GalNookCore DownloadManager.swift
+/tmp/galnook-core-validation/Sources/GalNookCore/Downloads/SegmentedDownloadEngine.swift:389:25: warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+387 |         let fileManager = FileManager.default
+388 |         if !fileManager.fileExists(atPath: partialURL.path) {
+389 |             fileManager.createFile(atPath: partialURL.path, contents: nil)
+    |                         `- warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+390 |         }
+391 |         let handle = try FileHandle(forWritingTo: partialURL)
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Library/GameSharingService.swift:97:29: warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+ 95 | 
+ 96 |     static func write(folder: URL, to outputURL: URL) throws {
+ 97 |         FileManager.default.createFile(atPath: outputURL.path, contents: nil)
+    |                             `- warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+ 98 |         let handle = try FileHandle(forWritingTo: outputURL)
+ 99 |         let writer = ZipArchiveWriter(output: handle)
+[9/27] Compiling GalNookCore DownloadResolving.swift
+/tmp/galnook-core-validation/Sources/GalNookCore/Downloads/SegmentedDownloadEngine.swift:389:25: warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+387 |         let fileManager = FileManager.default
+388 |         if !fileManager.fileExists(atPath: partialURL.path) {
+389 |             fileManager.createFile(atPath: partialURL.path, contents: nil)
+    |                         `- warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+390 |         }
+391 |         let handle = try FileHandle(forWritingTo: partialURL)
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Library/GameSharingService.swift:97:29: warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+ 95 | 
+ 96 |     static func write(folder: URL, to outputURL: URL) throws {
+ 97 |         FileManager.default.createFile(atPath: outputURL.path, contents: nil)
+    |                             `- warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+ 98 |         let handle = try FileHandle(forWritingTo: outputURL)
+ 99 |         let writer = ZipArchiveWriter(output: handle)
+[10/27] Compiling GalNookCore DownloadSupport.swift
+/tmp/galnook-core-validation/Sources/GalNookCore/Downloads/SegmentedDownloadEngine.swift:389:25: warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+387 |         let fileManager = FileManager.default
+388 |         if !fileManager.fileExists(atPath: partialURL.path) {
+389 |             fileManager.createFile(atPath: partialURL.path, contents: nil)
+    |                         `- warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+390 |         }
+391 |         let handle = try FileHandle(forWritingTo: partialURL)
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Library/GameSharingService.swift:97:29: warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+ 95 | 
+ 96 |     static func write(folder: URL, to outputURL: URL) throws {
+ 97 |         FileManager.default.createFile(atPath: outputURL.path, contents: nil)
+    |                             `- warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+ 98 |         let handle = try FileHandle(forWritingTo: outputURL)
+ 99 |         let writer = ZipArchiveWriter(output: handle)
+[11/27] Compiling GalNookCore SegmentedDownloadEngine.swift
+/tmp/galnook-core-validation/Sources/GalNookCore/Downloads/SegmentedDownloadEngine.swift:389:25: warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+387 |         let fileManager = FileManager.default
+388 |         if !fileManager.fileExists(atPath: partialURL.path) {
+389 |             fileManager.createFile(atPath: partialURL.path, contents: nil)
+    |                         `- warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+390 |         }
+391 |         let handle = try FileHandle(forWritingTo: partialURL)
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Library/GameSharingService.swift:97:29: warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+ 95 | 
+ 96 |     static func write(folder: URL, to outputURL: URL) throws {
+ 97 |         FileManager.default.createFile(atPath: outputURL.path, contents: nil)
+    |                             `- warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+ 98 |         let handle = try FileHandle(forWritingTo: outputURL)
+ 99 |         let writer = ZipArchiveWriter(output: handle)
+[12/27] Compiling GalNookCore GameLibraryImporter.swift
+/tmp/galnook-core-validation/Sources/GalNookCore/Downloads/SegmentedDownloadEngine.swift:389:25: warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+387 |         let fileManager = FileManager.default
+388 |         if !fileManager.fileExists(atPath: partialURL.path) {
+389 |             fileManager.createFile(atPath: partialURL.path, contents: nil)
+    |                         `- warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+390 |         }
+391 |         let handle = try FileHandle(forWritingTo: partialURL)
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Library/GameSharingService.swift:97:29: warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+ 95 | 
+ 96 |     static func write(folder: URL, to outputURL: URL) throws {
+ 97 |         FileManager.default.createFile(atPath: outputURL.path, contents: nil)
+    |                             `- warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+ 98 |         let handle = try FileHandle(forWritingTo: outputURL)
+ 99 |         let writer = ZipArchiveWriter(output: handle)
+[13/27] Compiling GalNookCore GameLibraryScanner.swift
+/tmp/galnook-core-validation/Sources/GalNookCore/Downloads/SegmentedDownloadEngine.swift:389:25: warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+387 |         let fileManager = FileManager.default
+388 |         if !fileManager.fileExists(atPath: partialURL.path) {
+389 |             fileManager.createFile(atPath: partialURL.path, contents: nil)
+    |                         `- warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+390 |         }
+391 |         let handle = try FileHandle(forWritingTo: partialURL)
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Library/GameSharingService.swift:97:29: warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+ 95 | 
+ 96 |     static func write(folder: URL, to outputURL: URL) throws {
+ 97 |         FileManager.default.createFile(atPath: outputURL.path, contents: nil)
+    |                             `- warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+ 98 |         let handle = try FileHandle(forWritingTo: outputURL)
+ 99 |         let writer = ZipArchiveWriter(output: handle)
+[14/27] Compiling GalNookCore GameSharingService.swift
+/tmp/galnook-core-validation/Sources/GalNookCore/Downloads/SegmentedDownloadEngine.swift:389:25: warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+387 |         let fileManager = FileManager.default
+388 |         if !fileManager.fileExists(atPath: partialURL.path) {
+389 |             fileManager.createFile(atPath: partialURL.path, contents: nil)
+    |                         `- warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+390 |         }
+391 |         let handle = try FileHandle(forWritingTo: partialURL)
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Library/GameSharingService.swift:97:29: warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+ 95 | 
+ 96 |     static func write(folder: URL, to outputURL: URL) throws {
+ 97 |         FileManager.default.createFile(atPath: outputURL.path, contents: nil)
+    |                             `- warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+ 98 |         let handle = try FileHandle(forWritingTo: outputURL)
+ 99 |         let writer = ZipArchiveWriter(output: handle)
+[15/27] Compiling GalNookCore AppSettings.swift
+/tmp/galnook-core-validation/Sources/GalNookCore/Downloads/SegmentedDownloadEngine.swift:389:25: warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+387 |         let fileManager = FileManager.default
+388 |         if !fileManager.fileExists(atPath: partialURL.path) {
+389 |             fileManager.createFile(atPath: partialURL.path, contents: nil)
+    |                         `- warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+390 |         }
+391 |         let handle = try FileHandle(forWritingTo: partialURL)
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Library/GameSharingService.swift:97:29: warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+ 95 | 
+ 96 |     static func write(folder: URL, to outputURL: URL) throws {
+ 97 |         FileManager.default.createFile(atPath: outputURL.path, contents: nil)
+    |                             `- warning: result of call to 'createFile(atPath:contents:attributes:)' is unused
+ 98 |         let handle = try FileHandle(forWritingTo: outputURL)
+ 99 |         let writer = ZipArchiveWriter(output: handle)
+[16/35] Compiling GalNookCore DownloadModels.swift
+<unknown>:0: note: 'success' declared here
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/CatalogService.swift:81:30: warning: enum case 'success' has one associated value that is a tuple of 2 elements
+ 79 |             for try await result in group {
+ 80 |                 switch result {
+ 81 |                 case .success(let source, let pageResult):
+    |                              `- warning: enum case 'success' has one associated value that is a tuple of 2 elements
+ 82 |                     successes += 1
+ 83 |                     hasMore = hasMore || pageResult.hasMore
+
+<unknown>:0: note: 'success' declared here
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/ResourceService.swift:43:30: warning: enum case 'success' has one associated value that is a tuple of 2 elements
+41 |             for try await response in group {
+42 |                 switch response {
+43 |                 case .success(_, let resources):
+   |                              `- warning: enum case 'success' has one associated value that is a tuple of 2 elements
+44 |                     successes += 1
+45 |                     result.append(contentsOf: resources)
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/JSONValue.swift:57:92: warning: '9223372036854775000' is not exactly representable as 'Double'; it becomes '9223372036854774784'
+55 | 
+56 |     public var int64: Int64? {
+57 |         guard let double, double.isFinite, double >= -9_223_372_036_854_775_000, double <= 9_223_372_036_854_775_000 else { return nil }
+   |                                                                                            `- warning: '9223372036854775000' is not exactly representable as 'Double'; it becomes '9223372036854774784'
+58 |         return Int64(double)
+59 |     }
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/JSONValue.swift:57:54: warning: '-9223372036854775000' is not exactly representable as 'Double'; it becomes '-9223372036854774784'
+55 | 
+56 |     public var int64: Int64? {
+57 |         guard let double, double.isFinite, double >= -9_223_372_036_854_775_000, double <= 9_223_372_036_854_775_000 else { return nil }
+   |                                                      `- warning: '-9223372036854775000' is not exactly representable as 'Double'; it becomes '-9223372036854774784'
+58 |         return Int64(double)
+59 |     }
+[17/35] Compiling GalNookCore GameModels.swift
+<unknown>:0: note: 'success' declared here
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/CatalogService.swift:81:30: warning: enum case 'success' has one associated value that is a tuple of 2 elements
+ 79 |             for try await result in group {
+ 80 |                 switch result {
+ 81 |                 case .success(let source, let pageResult):
+    |                              `- warning: enum case 'success' has one associated value that is a tuple of 2 elements
+ 82 |                     successes += 1
+ 83 |                     hasMore = hasMore || pageResult.hasMore
+
+<unknown>:0: note: 'success' declared here
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/ResourceService.swift:43:30: warning: enum case 'success' has one associated value that is a tuple of 2 elements
+41 |             for try await response in group {
+42 |                 switch response {
+43 |                 case .success(_, let resources):
+   |                              `- warning: enum case 'success' has one associated value that is a tuple of 2 elements
+44 |                     successes += 1
+45 |                     result.append(contentsOf: resources)
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/JSONValue.swift:57:92: warning: '9223372036854775000' is not exactly representable as 'Double'; it becomes '9223372036854774784'
+55 | 
+56 |     public var int64: Int64? {
+57 |         guard let double, double.isFinite, double >= -9_223_372_036_854_775_000, double <= 9_223_372_036_854_775_000 else { return nil }
+   |                                                                                            `- warning: '9223372036854775000' is not exactly representable as 'Double'; it becomes '9223372036854774784'
+58 |         return Int64(double)
+59 |     }
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/JSONValue.swift:57:54: warning: '-9223372036854775000' is not exactly representable as 'Double'; it becomes '-9223372036854774784'
+55 | 
+56 |     public var int64: Int64? {
+57 |         guard let double, double.isFinite, double >= -9_223_372_036_854_775_000, double <= 9_223_372_036_854_775_000 else { return nil }
+   |                                                      `- warning: '-9223372036854775000' is not exactly representable as 'Double'; it becomes '-9223372036854774784'
+58 |         return Int64(double)
+59 |     }
+[18/35] Compiling GalNookCore WorkModels.swift
+<unknown>:0: note: 'success' declared here
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/CatalogService.swift:81:30: warning: enum case 'success' has one associated value that is a tuple of 2 elements
+ 79 |             for try await result in group {
+ 80 |                 switch result {
+ 81 |                 case .success(let source, let pageResult):
+    |                              `- warning: enum case 'success' has one associated value that is a tuple of 2 elements
+ 82 |                     successes += 1
+ 83 |                     hasMore = hasMore || pageResult.hasMore
+
+<unknown>:0: note: 'success' declared here
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/ResourceService.swift:43:30: warning: enum case 'success' has one associated value that is a tuple of 2 elements
+41 |             for try await response in group {
+42 |                 switch response {
+43 |                 case .success(_, let resources):
+   |                              `- warning: enum case 'success' has one associated value that is a tuple of 2 elements
+44 |                     successes += 1
+45 |                     result.append(contentsOf: resources)
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/JSONValue.swift:57:92: warning: '9223372036854775000' is not exactly representable as 'Double'; it becomes '9223372036854774784'
+55 | 
+56 |     public var int64: Int64? {
+57 |         guard let double, double.isFinite, double >= -9_223_372_036_854_775_000, double <= 9_223_372_036_854_775_000 else { return nil }
+   |                                                                                            `- warning: '9223372036854775000' is not exactly representable as 'Double'; it becomes '9223372036854774784'
+58 |         return Int64(double)
+59 |     }
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/JSONValue.swift:57:54: warning: '-9223372036854775000' is not exactly representable as 'Double'; it becomes '-9223372036854774784'
+55 | 
+56 |     public var int64: Int64? {
+57 |         guard let double, double.isFinite, double >= -9_223_372_036_854_775_000, double <= 9_223_372_036_854_775_000 else { return nil }
+   |                                                      `- warning: '-9223372036854775000' is not exactly representable as 'Double'; it becomes '-9223372036854774784'
+58 |         return Int64(double)
+59 |     }
+[19/35] Compiling GalNookCore APIClient.swift
+<unknown>:0: note: 'success' declared here
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/CatalogService.swift:81:30: warning: enum case 'success' has one associated value that is a tuple of 2 elements
+ 79 |             for try await result in group {
+ 80 |                 switch result {
+ 81 |                 case .success(let source, let pageResult):
+    |                              `- warning: enum case 'success' has one associated value that is a tuple of 2 elements
+ 82 |                     successes += 1
+ 83 |                     hasMore = hasMore || pageResult.hasMore
+
+<unknown>:0: note: 'success' declared here
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/ResourceService.swift:43:30: warning: enum case 'success' has one associated value that is a tuple of 2 elements
+41 |             for try await response in group {
+42 |                 switch response {
+43 |                 case .success(_, let resources):
+   |                              `- warning: enum case 'success' has one associated value that is a tuple of 2 elements
+44 |                     successes += 1
+45 |                     result.append(contentsOf: resources)
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/JSONValue.swift:57:92: warning: '9223372036854775000' is not exactly representable as 'Double'; it becomes '9223372036854774784'
+55 | 
+56 |     public var int64: Int64? {
+57 |         guard let double, double.isFinite, double >= -9_223_372_036_854_775_000, double <= 9_223_372_036_854_775_000 else { return nil }
+   |                                                                                            `- warning: '9223372036854775000' is not exactly representable as 'Double'; it becomes '9223372036854774784'
+58 |         return Int64(double)
+59 |     }
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/JSONValue.swift:57:54: warning: '-9223372036854775000' is not exactly representable as 'Double'; it becomes '-9223372036854774784'
+55 | 
+56 |     public var int64: Int64? {
+57 |         guard let double, double.isFinite, double >= -9_223_372_036_854_775_000, double <= 9_223_372_036_854_775_000 else { return nil }
+   |                                                      `- warning: '-9223372036854775000' is not exactly representable as 'Double'; it becomes '-9223372036854774784'
+58 |         return Int64(double)
+59 |     }
+[20/35] Compiling GalNookCore CatalogService.swift
+<unknown>:0: note: 'success' declared here
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/CatalogService.swift:81:30: warning: enum case 'success' has one associated value that is a tuple of 2 elements
+ 79 |             for try await result in group {
+ 80 |                 switch result {
+ 81 |                 case .success(let source, let pageResult):
+    |                              `- warning: enum case 'success' has one associated value that is a tuple of 2 elements
+ 82 |                     successes += 1
+ 83 |                     hasMore = hasMore || pageResult.hasMore
+
+<unknown>:0: note: 'success' declared here
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/ResourceService.swift:43:30: warning: enum case 'success' has one associated value that is a tuple of 2 elements
+41 |             for try await response in group {
+42 |                 switch response {
+43 |                 case .success(_, let resources):
+   |                              `- warning: enum case 'success' has one associated value that is a tuple of 2 elements
+44 |                     successes += 1
+45 |                     result.append(contentsOf: resources)
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/JSONValue.swift:57:92: warning: '9223372036854775000' is not exactly representable as 'Double'; it becomes '9223372036854774784'
+55 | 
+56 |     public var int64: Int64? {
+57 |         guard let double, double.isFinite, double >= -9_223_372_036_854_775_000, double <= 9_223_372_036_854_775_000 else { return nil }
+   |                                                                                            `- warning: '9223372036854775000' is not exactly representable as 'Double'; it becomes '9223372036854774784'
+58 |         return Int64(double)
+59 |     }
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/JSONValue.swift:57:54: warning: '-9223372036854775000' is not exactly representable as 'Double'; it becomes '-9223372036854774784'
+55 | 
+56 |     public var int64: Int64? {
+57 |         guard let double, double.isFinite, double >= -9_223_372_036_854_775_000, double <= 9_223_372_036_854_775_000 else { return nil }
+   |                                                      `- warning: '-9223372036854775000' is not exactly representable as 'Double'; it becomes '-9223372036854774784'
+58 |         return Int64(double)
+59 |     }
+[21/35] Compiling GalNookCore JSONValue.swift
+<unknown>:0: note: 'success' declared here
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/CatalogService.swift:81:30: warning: enum case 'success' has one associated value that is a tuple of 2 elements
+ 79 |             for try await result in group {
+ 80 |                 switch result {
+ 81 |                 case .success(let source, let pageResult):
+    |                              `- warning: enum case 'success' has one associated value that is a tuple of 2 elements
+ 82 |                     successes += 1
+ 83 |                     hasMore = hasMore || pageResult.hasMore
+
+<unknown>:0: note: 'success' declared here
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/ResourceService.swift:43:30: warning: enum case 'success' has one associated value that is a tuple of 2 elements
+41 |             for try await response in group {
+42 |                 switch response {
+43 |                 case .success(_, let resources):
+   |                              `- warning: enum case 'success' has one associated value that is a tuple of 2 elements
+44 |                     successes += 1
+45 |                     result.append(contentsOf: resources)
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/JSONValue.swift:57:92: warning: '9223372036854775000' is not exactly representable as 'Double'; it becomes '9223372036854774784'
+55 | 
+56 |     public var int64: Int64? {
+57 |         guard let double, double.isFinite, double >= -9_223_372_036_854_775_000, double <= 9_223_372_036_854_775_000 else { return nil }
+   |                                                                                            `- warning: '9223372036854775000' is not exactly representable as 'Double'; it becomes '9223372036854774784'
+58 |         return Int64(double)
+59 |     }
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/JSONValue.swift:57:54: warning: '-9223372036854775000' is not exactly representable as 'Double'; it becomes '-9223372036854774784'
+55 | 
+56 |     public var int64: Int64? {
+57 |         guard let double, double.isFinite, double >= -9_223_372_036_854_775_000, double <= 9_223_372_036_854_775_000 else { return nil }
+   |                                                      `- warning: '-9223372036854775000' is not exactly representable as 'Double'; it becomes '-9223372036854774784'
+58 |         return Int64(double)
+59 |     }
+[22/35] Compiling GalNookCore ResourceService.swift
+<unknown>:0: note: 'success' declared here
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/CatalogService.swift:81:30: warning: enum case 'success' has one associated value that is a tuple of 2 elements
+ 79 |             for try await result in group {
+ 80 |                 switch result {
+ 81 |                 case .success(let source, let pageResult):
+    |                              `- warning: enum case 'success' has one associated value that is a tuple of 2 elements
+ 82 |                     successes += 1
+ 83 |                     hasMore = hasMore || pageResult.hasMore
+
+<unknown>:0: note: 'success' declared here
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/ResourceService.swift:43:30: warning: enum case 'success' has one associated value that is a tuple of 2 elements
+41 |             for try await response in group {
+42 |                 switch response {
+43 |                 case .success(_, let resources):
+   |                              `- warning: enum case 'success' has one associated value that is a tuple of 2 elements
+44 |                     successes += 1
+45 |                     result.append(contentsOf: resources)
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/JSONValue.swift:57:92: warning: '9223372036854775000' is not exactly representable as 'Double'; it becomes '9223372036854774784'
+55 | 
+56 |     public var int64: Int64? {
+57 |         guard let double, double.isFinite, double >= -9_223_372_036_854_775_000, double <= 9_223_372_036_854_775_000 else { return nil }
+   |                                                                                            `- warning: '9223372036854775000' is not exactly representable as 'Double'; it becomes '9223372036854774784'
+58 |         return Int64(double)
+59 |     }
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/JSONValue.swift:57:54: warning: '-9223372036854775000' is not exactly representable as 'Double'; it becomes '-9223372036854774784'
+55 | 
+56 |     public var int64: Int64? {
+57 |         guard let double, double.isFinite, double >= -9_223_372_036_854_775_000, double <= 9_223_372_036_854_775_000 else { return nil }
+   |                                                      `- warning: '-9223372036854775000' is not exactly representable as 'Double'; it becomes '-9223372036854774784'
+58 |         return Int64(double)
+59 |     }
+[23/35] Compiling GalNookCore CnGalClient.swift
+<unknown>:0: note: 'success' declared here
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/CatalogService.swift:81:30: warning: enum case 'success' has one associated value that is a tuple of 2 elements
+ 79 |             for try await result in group {
+ 80 |                 switch result {
+ 81 |                 case .success(let source, let pageResult):
+    |                              `- warning: enum case 'success' has one associated value that is a tuple of 2 elements
+ 82 |                     successes += 1
+ 83 |                     hasMore = hasMore || pageResult.hasMore
+
+<unknown>:0: note: 'success' declared here
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/ResourceService.swift:43:30: warning: enum case 'success' has one associated value that is a tuple of 2 elements
+41 |             for try await response in group {
+42 |                 switch response {
+43 |                 case .success(_, let resources):
+   |                              `- warning: enum case 'success' has one associated value that is a tuple of 2 elements
+44 |                     successes += 1
+45 |                     result.append(contentsOf: resources)
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/JSONValue.swift:57:92: warning: '9223372036854775000' is not exactly representable as 'Double'; it becomes '9223372036854774784'
+55 | 
+56 |     public var int64: Int64? {
+57 |         guard let double, double.isFinite, double >= -9_223_372_036_854_775_000, double <= 9_223_372_036_854_775_000 else { return nil }
+   |                                                                                            `- warning: '9223372036854775000' is not exactly representable as 'Double'; it becomes '9223372036854774784'
+58 |         return Int64(double)
+59 |     }
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/JSONValue.swift:57:54: warning: '-9223372036854775000' is not exactly representable as 'Double'; it becomes '-9223372036854774784'
+55 | 
+56 |     public var int64: Int64? {
+57 |         guard let double, double.isFinite, double >= -9_223_372_036_854_775_000, double <= 9_223_372_036_854_775_000 else { return nil }
+   |                                                      `- warning: '-9223372036854775000' is not exactly representable as 'Double'; it becomes '-9223372036854774784'
+58 |         return Int64(double)
+59 |     }
+[24/35] Compiling GalNookCore NextMoeClient.swift
+<unknown>:0: note: 'success' declared here
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/CatalogService.swift:81:30: warning: enum case 'success' has one associated value that is a tuple of 2 elements
+ 79 |             for try await result in group {
+ 80 |                 switch result {
+ 81 |                 case .success(let source, let pageResult):
+    |                              `- warning: enum case 'success' has one associated value that is a tuple of 2 elements
+ 82 |                     successes += 1
+ 83 |                     hasMore = hasMore || pageResult.hasMore
+
+<unknown>:0: note: 'success' declared here
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/ResourceService.swift:43:30: warning: enum case 'success' has one associated value that is a tuple of 2 elements
+41 |             for try await response in group {
+42 |                 switch response {
+43 |                 case .success(_, let resources):
+   |                              `- warning: enum case 'success' has one associated value that is a tuple of 2 elements
+44 |                     successes += 1
+45 |                     result.append(contentsOf: resources)
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/JSONValue.swift:57:92: warning: '9223372036854775000' is not exactly representable as 'Double'; it becomes '9223372036854774784'
+55 | 
+56 |     public var int64: Int64? {
+57 |         guard let double, double.isFinite, double >= -9_223_372_036_854_775_000, double <= 9_223_372_036_854_775_000 else { return nil }
+   |                                                                                            `- warning: '9223372036854775000' is not exactly representable as 'Double'; it becomes '9223372036854774784'
+58 |         return Int64(double)
+59 |     }
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/JSONValue.swift:57:54: warning: '-9223372036854775000' is not exactly representable as 'Double'; it becomes '-9223372036854774784'
+55 | 
+56 |     public var int64: Int64? {
+57 |         guard let double, double.isFinite, double >= -9_223_372_036_854_775_000, double <= 9_223_372_036_854_775_000 else { return nil }
+   |                                                      `- warning: '-9223372036854775000' is not exactly representable as 'Double'; it becomes '-9223372036854774784'
+58 |         return Int64(double)
+59 |     }
+[25/35] Compiling GalNookCore SearchGalResourceClient.swift
+<unknown>:0: note: 'success' declared here
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/CatalogService.swift:81:30: warning: enum case 'success' has one associated value that is a tuple of 2 elements
+ 79 |             for try await result in group {
+ 80 |                 switch result {
+ 81 |                 case .success(let source, let pageResult):
+    |                              `- warning: enum case 'success' has one associated value that is a tuple of 2 elements
+ 82 |                     successes += 1
+ 83 |                     hasMore = hasMore || pageResult.hasMore
+
+<unknown>:0: note: 'success' declared here
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/ResourceService.swift:43:30: warning: enum case 'success' has one associated value that is a tuple of 2 elements
+41 |             for try await response in group {
+42 |                 switch response {
+43 |                 case .success(_, let resources):
+   |                              `- warning: enum case 'success' has one associated value that is a tuple of 2 elements
+44 |                     successes += 1
+45 |                     result.append(contentsOf: resources)
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/JSONValue.swift:57:92: warning: '9223372036854775000' is not exactly representable as 'Double'; it becomes '9223372036854774784'
+55 | 
+56 |     public var int64: Int64? {
+57 |         guard let double, double.isFinite, double >= -9_223_372_036_854_775_000, double <= 9_223_372_036_854_775_000 else { return nil }
+   |                                                                                            `- warning: '9223372036854775000' is not exactly representable as 'Double'; it becomes '9223372036854774784'
+58 |         return Int64(double)
+59 |     }
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/JSONValue.swift:57:54: warning: '-9223372036854775000' is not exactly representable as 'Double'; it becomes '-9223372036854774784'
+55 | 
+56 |     public var int64: Int64? {
+57 |         guard let double, double.isFinite, double >= -9_223_372_036_854_775_000, double <= 9_223_372_036_854_775_000 else { return nil }
+   |                                                      `- warning: '-9223372036854775000' is not exactly representable as 'Double'; it becomes '-9223372036854774784'
+58 |         return Int64(double)
+59 |     }
+[26/35] Compiling GalNookCore VNDBClient.swift
+<unknown>:0: note: 'success' declared here
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/CatalogService.swift:81:30: warning: enum case 'success' has one associated value that is a tuple of 2 elements
+ 79 |             for try await result in group {
+ 80 |                 switch result {
+ 81 |                 case .success(let source, let pageResult):
+    |                              `- warning: enum case 'success' has one associated value that is a tuple of 2 elements
+ 82 |                     successes += 1
+ 83 |                     hasMore = hasMore || pageResult.hasMore
+
+<unknown>:0: note: 'success' declared here
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/ResourceService.swift:43:30: warning: enum case 'success' has one associated value that is a tuple of 2 elements
+41 |             for try await response in group {
+42 |                 switch response {
+43 |                 case .success(_, let resources):
+   |                              `- warning: enum case 'success' has one associated value that is a tuple of 2 elements
+44 |                     successes += 1
+45 |                     result.append(contentsOf: resources)
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/JSONValue.swift:57:92: warning: '9223372036854775000' is not exactly representable as 'Double'; it becomes '9223372036854774784'
+55 | 
+56 |     public var int64: Int64? {
+57 |         guard let double, double.isFinite, double >= -9_223_372_036_854_775_000, double <= 9_223_372_036_854_775_000 else { return nil }
+   |                                                                                            `- warning: '9223372036854775000' is not exactly representable as 'Double'; it becomes '9223372036854774784'
+58 |         return Int64(double)
+59 |     }
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/JSONValue.swift:57:54: warning: '-9223372036854775000' is not exactly representable as 'Double'; it becomes '-9223372036854774784'
+55 | 
+56 |     public var int64: Int64? {
+57 |         guard let double, double.isFinite, double >= -9_223_372_036_854_775_000, double <= 9_223_372_036_854_775_000 else { return nil }
+   |                                                      `- warning: '-9223372036854775000' is not exactly representable as 'Double'; it becomes '-9223372036854774784'
+58 |         return Int64(double)
+59 |     }
+[27/35] Compiling GalNookCore HTMLExtensions.swift
+<unknown>:0: note: 'success' declared here
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/CatalogService.swift:81:30: warning: enum case 'success' has one associated value that is a tuple of 2 elements
+ 79 |             for try await result in group {
+ 80 |                 switch result {
+ 81 |                 case .success(let source, let pageResult):
+    |                              `- warning: enum case 'success' has one associated value that is a tuple of 2 elements
+ 82 |                     successes += 1
+ 83 |                     hasMore = hasMore || pageResult.hasMore
+
+<unknown>:0: note: 'success' declared here
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/ResourceService.swift:43:30: warning: enum case 'success' has one associated value that is a tuple of 2 elements
+41 |             for try await response in group {
+42 |                 switch response {
+43 |                 case .success(_, let resources):
+   |                              `- warning: enum case 'success' has one associated value that is a tuple of 2 elements
+44 |                     successes += 1
+45 |                     result.append(contentsOf: resources)
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/JSONValue.swift:57:92: warning: '9223372036854775000' is not exactly representable as 'Double'; it becomes '9223372036854774784'
+55 | 
+56 |     public var int64: Int64? {
+57 |         guard let double, double.isFinite, double >= -9_223_372_036_854_775_000, double <= 9_223_372_036_854_775_000 else { return nil }
+   |                                                                                            `- warning: '9223372036854775000' is not exactly representable as 'Double'; it becomes '9223372036854774784'
+58 |         return Int64(double)
+59 |     }
+
+/tmp/galnook-core-validation/Sources/GalNookCore/Networking/JSONValue.swift:57:54: warning: '-9223372036854775000' is not exactly representable as 'Double'; it becomes '-9223372036854774784'
+55 | 
+56 |     public var int64: Int64? {
+57 |         guard let double, double.isFinite, double >= -9_223_372_036_854_775_000, double <= 9_223_372_036_854_775_000 else { return nil }
+   |                                                      `- warning: '-9223372036854775000' is not exactly representable as 'Double'; it becomes '-9223372036854774784'
+58 |         return Int64(double)
+59 |     }
+[28/42] Compiling GalNookCore YmgalClient.swift
+[29/42] Compiling GalNookCore BaiduPanClient.swift
+[30/42] Compiling GalNookCore LanzouClient.swift
+[31/42] Compiling GalNookCore Pan115Client.swift
+[32/42] Compiling GalNookCore Pan123Client.swift
+[33/42] Compiling GalNookCore PanModels.swift
+[34/42] Compiling GalNookCore PanResolverActor.swift
+[35/42] Compiling GalNookCore PanSupport.swift
+[36/45] Compiling GalNookCore QuarkUCClient.swift
+[37/45] Compiling GalNookCore ProfileModels.swift
+[38/45] Compiling GalNookCore ProfileStore.swift
+[39/45] Compiling GalNookCore RouteModels.swift
+[40/45] Compiling GalNookCore RouteStore.swift
+[41/45] Compiling GalNookCore RouteTextParser.swift
+[42/45] Compiling GalNookCore URLSessionAsyncBytes.swift
+[43/47] Compiling GalNookCore StringExtensions.swift
+[44/47] Compiling GalNookCore Formatters.swift
+[45/47] Compiling GalNookCore PanAccountStore.swift
+[46/47] Compiling GalNookCore JSONStore.swift
+[47/47] Compiling GalNookCore KeychainStore.swift
+Build complete! (19.43s)
