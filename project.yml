@@ -20,6 +20,10 @@ packages:
   SWCompression:
     url: https://github.com/tsolomko/SWCompression
     exactVersion: 4.8.6
+  # SWCompression 的传递依赖必须锁在 iOS 16 兼容版本；新版本要求 iOS 17。
+  BitByteData:
+    url: https://github.com/tsolomko/BitByteData
+    exactVersion: 2.0.0
 
 targets:
   GalNook:
@@ -50,6 +54,8 @@ targets:
     dependencies:
       - package: SWCompression
         product: SWCompression
+      - package: BitByteData
+        product: BitByteData
 
   GalNookTests:
     type: bundle.unit-test
