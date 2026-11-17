@@ -156,8 +156,7 @@ public final class DownloadManager: ObservableObject {
 
     public func retry(id: UUID) {
         guard let index = tasks.firstIndex(where: { $0.id == id }),
-              tasks[index].state == .failed || tasks[index].state == .cancelled,
-              operations[id] == nil else { return }
+              tasks[index].state == .failed || tasks[index].state == .cancelled else { return }
         tasks[index].state = .waiting
         tasks[index].retryCount = 0
         tasks[index].errorMessage = nil

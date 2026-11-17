@@ -29,7 +29,7 @@ final class DownloadTests: XCTestCase {
                     "ETag": "\"v1\""
                 ],
                 chunks: [Data(firstChunk), body.suffix(body.count - firstChunk.count)],
-                chunkDelay: 100_000_000
+                chunkDelay: 3_000_000_000
             )
         }
         let manager = makeManager(
@@ -89,6 +89,7 @@ final class DownloadTests: XCTestCase {
                     "ETag": "\"retry-v1\""
                 ],
                 chunks: [firstChunk],
+                terminalDelay: 1_500_000_000,
                 terminalError: URLError(.networkConnectionLost)
             )
         }
@@ -98,7 +99,7 @@ final class DownloadTests: XCTestCase {
         )
         let id = manager.enqueue(resource(fileName: "retry.zip", path: "/retry.zip"))
 
-        try await waitUntil(timeout: 6) { manager.task(id: id)?.state == .completed }
+        try await waitUntil(timeout: 15) { manager.task(id: id)?.state == .completed }
         XCTAssertEqual(manager.task(id: id)?.retryCount, 1)
         let requests = MockURLProtocol.requestHistory()
         XCTAssertEqual(requests.count, 2)
@@ -122,6 +123,7 @@ final class DownloadTests: XCTestCase {
                         "Last-Modified": lastModified
                     ],
                     chunks: [firstChunk],
+                    terminalDelay: 1_500_000_000,
                     terminalError: URLError(.networkConnectionLost)
                 )
             }
@@ -138,11 +140,11 @@ final class DownloadTests: XCTestCase {
             settings: DownloadSettings(maximumConcurrent: 1, maximumRetries: 0)
         )
         let id = manager.enqueue(resource(fileName: "restart.zip", path: "/restart.zip"))
-        try await waitUntil { manager.task(id: id)?.state == .failed }
+        try await waitUntil(timeout: 8) { manager.task(id: id)?.state == .failed }
         XCTAssertEqual(DownloadFileSupport.fileSize(partialFile(root: root, id: id)), 64 * 1024)
 
         manager.retry(id: id)
-        try await waitUntil { manager.task(id: id)?.state == .completed }
+        try await waitUntil(timeout: 8) { manager.task(id: id)?.state == .completed }
         let requests = MockURLProtocol.requestHistory()
         XCTAssertEqual(requests.count, 2)
         guard requests.count > 1 else { return }
@@ -234,7 +236,7 @@ final class DownloadTests: XCTestCase {
         XCTAssertFalse(FileManager.default.fileExists(atPath: metadataFile(root: root, id: id).path))
 
         manager.retry(id: id)
-        try await waitUntil { manager.task(id: id)?.state == .completed }
+        try await waitUntil(timeout: 8) { manager.task(id: id)?.state == .completed }
         XCTAssertNil(MockURLProtocol.requestHistory().last?.value(forHTTPHeaderField: "Range"))
         XCTAssertEqual(try completedData(manager: manager, id: id, root: root), body)
     }
@@ -282,6 +284,7 @@ private struct StubResponse: Sendable {
     var headers: [String: String]
     var chunks: [Data]
     var chunkDelay: UInt64 = 0
+    var terminalDelay: UInt64 = 0
     var terminalError: URLError?
 }
 
@@ -330,6 +333,14 @@ private final class MockURLProtocol: URLProtocol, @unchecked Sendable {
                 }
                 guard !Task.isCancelled else { return }
                 client?.urlProtocol(self, didLoad: chunk)
+            }
+            guard !Task.isCancelled else { return }
+            if plan.terminalDelay > 0 {
+                do {
+                    try await Task.sleep(nanoseconds: plan.terminalDelay)
+                } catch {
+                    return
+                }
             }
             guard !Task.isCancelled else { return }
             if let error = plan.terminalError {
