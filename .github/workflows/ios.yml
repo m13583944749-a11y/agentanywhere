@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   test-and-build:
-    runs-on: macos-15
+    runs-on: macos-14
     timeout-minutes: 45
     env:
       BUNDLE_ID: ${{ vars.GALNOOK_BUNDLE_ID || 'app.galnook.ios' }}
@@ -27,7 +27,7 @@ jobs:
       - name: Select stable Xcode
         uses: maxim-lobanov/setup-xcode@v1
         with:
-          xcode-version: "16.4"
+          xcode-version: "16.2"
 
       - name: Install XcodeGen
         run: |
