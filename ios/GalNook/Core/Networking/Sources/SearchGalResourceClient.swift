@@ -73,8 +73,10 @@ public struct SearchGalResourceClient: ResourceClient {
     }
 
     private func makeResource(itemName: String, url: URL, siteName: String, tags: [String], work: WorkSummary) -> GameResource {
-        let provider = PanProvider.detect(url: url)
+        let detectedProvider = PanProvider.detect(url: url)
         let lower = "\(itemName) \(tags.joined(separator: " "))".lowercased()
+        let isDrivePage = ["sudrive", "spldrive", "mixdrive"].contains { lower.contains($0) }
+        let provider = isDrivePage ? .other : detectedProvider
         let engine: GameEngine
         if lower.contains("ren'py") || lower.contains("renpy") { engine = .renpy }
         else if lower.contains("krkr") || lower.contains("kirikiri") || lower.contains("xp3") { engine = .kirikiri }
@@ -84,7 +86,7 @@ public struct SearchGalResourceClient: ResourceClient {
         else if lower.contains("rpg") { engine = .rpgMaker }
         else { engine = .unknown }
         let isAPK = url.pathExtension.lowercased() == "apk" || lower.contains(".apk") || lower.contains("安卓直装")
-        let isDirect = provider == .direct
+        let isDirect = !isDrivePage && detectedProvider == .direct
         return GameResource(
             id: "searchgal:\(url.absoluteString)",
             workID: work.id,

@@ -43,6 +43,22 @@ final class NetworkingTests: XCTestCase {
         XCTAssertTrue(resources[1].isAndroidPackage)
     }
 
+    func testSearchGalDrivePageIsNotTreatedAsArchive() async throws {
+        let sse = """
+        data: {"result":{"name":"资源站","tags":["NoReq","SuDrive"],"items":[{"name":"游戏.rar","url":"https://resource.example.com/files/game.rar"}]}}
+        """
+        ProtocolStub.handler = { _ in (200, ["Content-Type": "text/event-stream"], Data(sse.utf8)) }
+        let client = SearchGalResourceClient(
+            session: ProtocolStub.session(),
+            baseProvider: { URL(string: "https://search.example.com")! }
+        )
+        let resources = try await client.resources(for: WorkSummary(source: .nextMoe, sourceID: "1", title: "游戏"))
+        XCTAssertEqual(resources.count, 1)
+        XCTAssertEqual(resources[0].provider, .other)
+        XCTAssertNil(resources[0].directURL)
+        XCTAssertNotNil(resources[0].pageURL)
+    }
+
     func testNextMoeSummaryMapping() async throws {
         let body = """
         {"items":[{"id":"248408","display_name":"原名","localized":{"zh-Hans":{"value":"中文名"}},"release_date":"2019-07-09","cover":{"url":"https://img.example.com/cover.webp"},"companies":[{"display_name":"会社"}],"ratings":[{"source":"vndb","score":87.3,"vote_count":11603}]}],"next_cursor":null}

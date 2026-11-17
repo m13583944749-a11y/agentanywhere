@@ -152,6 +152,27 @@ final class DownloadTests: XCTestCase {
         XCTAssertEqual(try completedData(manager: manager, id: id, root: root), body)
     }
 
+    func testHTMLResourcePageFailsInsteadOfSavingFakeArchive() async throws {
+        let root = try makeTemporaryDirectory()
+        defer { try? FileManager.default.removeItem(at: root) }
+        let html = Data("<!doctype html><html><body>resource page</body></html>".utf8)
+        MockURLProtocol.reset { _ in
+            StubResponse(
+                headers: ["Content-Type": "text/html; charset=utf-8", "Content-Length": String(html.count)],
+                chunks: [html]
+            )
+        }
+        let manager = makeManager(
+            root: root,
+            settings: DownloadSettings(maximumConcurrent: 1, maximumRetries: 0)
+        )
+        let id = manager.enqueue(resource(fileName: "game.rar", path: "/page.rar"))
+        try await waitUntil { manager.task(id: id)?.state == .failed }
+        XCTAssertTrue(manager.task(id: id)?.errorMessage?.contains("网页") == true)
+        XCTAssertNil(manager.fileURL(for: id))
+        XCTAssertEqual(DownloadFileSupport.fileSize(partialFile(root: root, id: id)), 0)
+    }
+
     func testQueueConcurrencySafeNamesAndConflictRenaming() async throws {
         let root = try makeTemporaryDirectory()
         defer { try? FileManager.default.removeItem(at: root) }

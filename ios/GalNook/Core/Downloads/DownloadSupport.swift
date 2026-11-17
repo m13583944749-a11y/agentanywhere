@@ -7,6 +7,7 @@ public enum DownloadError: LocalizedError, Sendable {
     case invalidResponse
     case httpStatus(Int)
     case invalidContentRange(String)
+    case unexpectedContentType(String)
     case incompleteDownload(expected: Int64, actual: Int64)
 
     public var errorDescription: String? {
@@ -23,6 +24,8 @@ public enum DownloadError: LocalizedError, Sendable {
             return "下载失败（HTTP \(status)）"
         case .invalidContentRange(let value):
             return "服务器返回了无效的 Content-Range：\(value)"
+        case .unexpectedContentType(let value):
+            return "下载地址返回的是网页（\(value)），不是游戏文件。请回到资源页，点“打开页面”并在网站内获取真实下载链接。"
         case .incompleteDownload(let expected, let actual):
             return "下载数据不完整：应为 \(expected) 字节，实际为 \(actual) 字节"
         }
@@ -34,7 +37,7 @@ public enum DownloadError: LocalizedError, Sendable {
             return status == 408 || status == 429 || status >= 500
         case .incompleteDownload, .invalidResponse, .invalidContentRange:
             return true
-        case .missingDirectURL, .unsupportedURL, .noResolver:
+        case .missingDirectURL, .unsupportedURL, .noResolver, .unexpectedContentType:
             return false
         }
     }

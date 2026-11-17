@@ -66,6 +66,13 @@ struct DirectDownloadEngine: Sendable {
                 throw DownloadError.httpStatus(http.statusCode)
             }
 
+            let contentType = http.value(forHTTPHeaderField: "Content-Type")?.lowercased() ?? ""
+            if contentType.contains("text/html") || contentType.contains("application/xhtml+xml") {
+                try? fileManager.removeItem(at: partialURL)
+                try? fileManager.removeItem(at: metadataURL)
+                throw DownloadError.unexpectedContentType(contentType)
+            }
+
             var range: ContentByteRange?
             if http.statusCode == 206 {
                 let value = http.value(forHTTPHeaderField: "Content-Range") ?? ""
