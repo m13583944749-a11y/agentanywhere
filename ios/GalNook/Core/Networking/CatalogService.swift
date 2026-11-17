@@ -88,6 +88,10 @@ public actor CatalogService {
                     if works.count > limit * max(1, selected.count) { break }
                     _ = source
                 case .failure(let error):
+                    if let sourceError = error as? SourceFailure,
+                       case .unsupported = sourceError {
+                        continue
+                    }
                     failures.append(error.localizedDescription)
                 }
             }

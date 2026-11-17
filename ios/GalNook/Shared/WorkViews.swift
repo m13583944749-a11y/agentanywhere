@@ -6,8 +6,11 @@ struct WorkCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             ZStack(alignment: .bottomTrailing) {
-                RemoteImage(url: work.coverURL)
+                Color.clear
                     .aspectRatio(0.72, contentMode: .fit)
+                    .overlay {
+                        RemoteImage(url: work.coverURL, contentMode: .fill)
+                    }
                     .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
                 if let rating = work.rating {
                     Text(String(format: "%.1f", rating))
@@ -22,6 +25,7 @@ struct WorkCard: View {
                 .font(.subheadline.weight(.medium))
                 .lineLimit(2)
                 .multilineTextAlignment(.leading)
+                .frame(minHeight: 36, alignment: .topLeading)
             HStack(spacing: 4) {
                 Text(work.source.displayName)
                 if let date = work.releaseDate, !date.isEmpty {
@@ -93,10 +97,10 @@ struct WorkRow: View {
 
 struct AdaptiveWorkGrid: View {
     let works: [WorkSummary]
-    var minimumWidth: CGFloat = 142
+    var minimumWidth: CGFloat = 155
 
     private var columns: [GridItem] {
-        [GridItem(.adaptive(minimum: minimumWidth, maximum: 190), spacing: 16, alignment: .top)]
+        [GridItem(.adaptive(minimum: minimumWidth, maximum: 200), spacing: 16, alignment: .top)]
     }
 
     var body: some View {
