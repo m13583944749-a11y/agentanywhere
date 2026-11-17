@@ -8,6 +8,7 @@ struct ResourcesView: View {
     @State private var showsAddResource = false
     @State private var safariURL: URL?
     @State private var copiedText: String?
+    @State private var expandedGroups = Set<String>()
     @EnvironmentObject private var model: AppModel
 
     var body: some View {
@@ -19,6 +20,23 @@ struct ResourcesView: View {
                 Button { showsAddResource = true } label: {
                     Label("添加", systemImage: "plus")
                 }
+            }
+            HStack {
+                Text("共 \(viewModel.filtered.count) 条资源 · \(viewModel.groups.count) 个资源站")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+                Spacer()
+                Button {
+                    viewModel.testSpeeds()
+                } label: {
+                    if viewModel.isSpeedTesting {
+                        HStack(spacing: 5) { ProgressView().controlSize(.small); Text("测速中…") }
+                    } else {
+                        Label("开始测速", systemImage: "speedometer")
+                    }
+                }
+                .buttonStyle(.bordered)
+                .disabled(viewModel.isSpeedTesting || viewModel.filtered.isEmpty)
             }
             if viewModel.isLoading {
                 VStack(spacing: 10) {
@@ -35,22 +53,21 @@ struct ResourcesView: View {
                     .font(.footnote)
                     .foregroundStyle(.orange)
             }
-            ForEach(viewModel.filtered) { resource in
-                ResourceRow(
-                    resource: resource,
-                    open: { safariURL = $0 },
-                    copy: { text in
-                        UIPasteboard.general.string = text
-                        copiedText = text
-                    },
-                    download: {
-                        if DownloadActions.shared.enqueue(resource) {
-                            model.selectedTab = .downloads
-                        } else if let url = resource.preferredURL {
-                            safariURL = url
-                        }
-                    }
-                )
+            if !viewModel.apkGroups.isEmpty {
+                Text("可能含有 APK 的资源站")
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(.blue)
+                ForEach(viewModel.apkGroups) { group in
+                    resourceGroup(group)
+                }
+            }
+            if !viewModel.otherGroups.isEmpty {
+                Text("其他资源站")
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(.secondary)
+                ForEach(viewModel.otherGroups) { group in
+                    resourceGroup(group)
+                }
             }
             if !viewModel.isLoading, viewModel.filtered.isEmpty {
                 EmptyStateView(
@@ -72,10 +89,61 @@ struct ResourcesView: View {
             Button("好") {}
         } message: { Text(copiedText ?? "") }
     }
+
+    @ViewBuilder
+    private func resourceGroup(_ group: ResourcesViewModel.ResourceGroup) -> some View {
+        let isExpanded = expandedGroups.contains(group.id)
+        VStack(spacing: 0) {
+            Button {
+                if isExpanded { expandedGroups.remove(group.id) }
+                else { expandedGroups.insert(group.id) }
+            } label: {
+                HStack {
+                    Text(group.sourceName).font(.headline)
+                    Spacer()
+                    Text("\(group.resources.count) 条")
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                    Image(systemName: isExpanded ? "chevron.up" : "chevron.down")
+                        .foregroundStyle(.secondary)
+                }
+                .padding()
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            if isExpanded {
+                Divider()
+                VStack(spacing: 10) {
+                    ForEach(group.resources) { resource in
+                        ResourceRow(
+                            resource: resource,
+                            speed: viewModel.speedResult(for: resource),
+                            open: { safariURL = $0 },
+                            copy: { text in
+                                UIPasteboard.general.string = text
+                                copiedText = text
+                            },
+                            download: {
+                                if DownloadActions.shared.enqueue(resource) {
+                                    model.selectedTab = .downloads
+                                } else if let url = resource.preferredURL {
+                                    safariURL = url
+                                }
+                            }
+                        )
+                    }
+                }
+                .padding(.horizontal, 10)
+                .padding(.bottom, 10)
+            }
+        }
+        .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+    }
 }
 
 private struct ResourceRow: View {
     let resource: GameResource
+    var speed: ResourceSpeedResult?
     let open: (URL) -> Void
     let copy: (String) -> Void
     let download: () -> Void
@@ -93,11 +161,18 @@ private struct ResourceRow: View {
                         .foregroundStyle(.secondary)
                 }
                 Spacer()
-                if resource.engine != .unknown {
-                    Text(resource.engine.displayName)
-                        .font(.caption2)
-                        .padding(5)
-                        .background(Color.accentColor.opacity(0.12), in: Capsule())
+                VStack(alignment: .trailing, spacing: 4) {
+                    if resource.engine != .unknown {
+                        Text(resource.engine.displayName)
+                            .font(.caption2)
+                            .padding(5)
+                            .background(Color.accentColor.opacity(0.12), in: Capsule())
+                    }
+                    if let speed {
+                        Text(speed.summary)
+                            .font(.caption2)
+                            .foregroundStyle(speed.error == nil ? .green : .secondary)
+                    }
                 }
             }
             HStack(spacing: 10) {
